@@ -157,11 +157,5 @@ The application includes local heap algorithms as a fallback when the backend is
 - Supports ES6+ JavaScript features
 - Responsive design for mobile devices
 
-## Contributing
-
-Feel free to contribute to this project by:
-1. Forking the repository
-2. Creating a feature branch
-3. Making your changes
-4. Submitting a pull request
+This project was created as an academic project to demonstrate heap data structure visualization and interactive learning.
 
