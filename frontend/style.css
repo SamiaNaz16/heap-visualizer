@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+               max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+            margin-bottom: 30px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+           margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+        font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    background: white;
+    border-radius: 15px;
+            padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.input-section {
+    background: #f8f9fa;
+    padding: 25px;
+     border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+      margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+           border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.heap-type {
+    margin-bottom: 20px;
+}
+
+.heap-type label {
+    font-weight: 600;
+    color: #555;
+       margin-bottom: 10px;
+    display: block;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: flex;
+       align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#buildHeap {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+#buildHeap:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#clearAll {
+    background: #dc3545;
+    color: white;
+}
+
+#clearAll:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.visualization-section {
+    margin-bottom: 30px;
+}
+
+.visualization-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.tree-container {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+#treeSvg {
+    display: block;
+    margin: 0 auto;
+}
+
+.heap-array h3 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.array-display {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    min-height: 60px;
+    align-items: center;
+}
+
+.array-item {
+    background: #667eea;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: fadeIn 0.3s ease-in;
+}
+
+.array-item.highlight {
+    background: #28a745;
+    transform: scale(1.1);
+}
+
+.operations-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.operation-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.operation-controls .input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.operation-controls input[type="number"] {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+#insertBtn, #extractBtn, #peekBtn {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+}
+
+#extractBtn {
+    background: #ffc107;
+    color: #333;
+}
+
+#peekBtn {
+    background: #17a2b8;
+    color: white;
+}
+
+#insertBtn:hover, #extractBtn:hover, #peekBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.operation-result {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    min-height: 50px;
+    border-left: 4px solid #667eea;
+    font-weight: 500;
+}
+
+.operation-result.success {
+    border-left-color: #28a745;
+    background: #d4edda;
+    color: #155724;
+}
+
+.operation-result.error {
+    border-left-color: #dc3545;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.node {
+    fill: #667eea;
+    stroke: #333;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.node:hover {
+    fill: #764ba2;
+    transform: scale(1.05);
+}
+
+.node-text {
+    fill: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+.edge {
+    stroke: #666;
+    stroke-width: 2px;
+    fill: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .operation-controls {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
